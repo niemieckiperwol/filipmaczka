@@ -25,7 +25,15 @@ function sheetLayout(count: number) {
   } as CSSProperties;
 }
 
-export function Slideshow({ frames, allowSheet = false }: { frames: Frame[]; allowSheet?: boolean }) {
+export function Slideshow({
+  frames,
+  allowSheet = false,
+  showModel = true,
+}: {
+  frames: Frame[];
+  allowSheet?: boolean;
+  showModel?: boolean;
+}) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [view, setView] = useState<View>("slideshow");
@@ -186,7 +194,7 @@ export function Slideshow({ frames, allowSheet = false }: { frames: Frame[]; all
       </main>
 
       <footer className="baseline">
-        <p aria-live="polite">{frame.model}</p>
+        {showModel && <p aria-live="polite">{frame.model}</p>}
         <p className="baseline-end">
           <span className="baseline-count">{position}</span>
           <button type="button" onClick={() => setPausedState(!paused)} aria-pressed={paused}>

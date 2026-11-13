@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --green: #6ba05c;
   --pink: #fed1d4;
   --grey: #c6bfb5;
   --yellow: #fff027;
   --white: #ffffff;
   --black: #111111;
+  --red: #8a2232;
   --gutter: clamp(0.875rem, 1.4vw, 1.75rem);
   --type: clamp(1.4rem, 0.75rem + 1.9vw, 3rem);
 }
@@ -21,7 +21,7 @@ body {
 body {
   margin: 0;
   background: var(--white);
-  color: var(--green);
+  color: var(--red);
   font-family: var(--font-grotesk), system-ui, sans-serif;
   font-size: var(--type);
   font-weight: 720;
@@ -66,7 +66,7 @@ button:focus-visible {
 }
 
 .screen {
-  --ink: var(--green);
+  --ink: var(--red);
   --field: var(--white);
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
@@ -102,7 +102,36 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.masthead {
+  align-items: baseline;
+}
+
+.masthead-name {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55em;
+  font-size: 1.15em;
+  font-weight: 300;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.masthead-first {
+  color: var(--red);
+  letter-spacing: 0.32em;
+  margin-right: -0.32em;
+}
+
+.masthead-last {
+  color: var(--black);
+}
+
+.baseline-end {
+  margin-left: auto;
+}
+
 .masthead-nav {
+  font-size: max(0.5em, 0.9375rem);
   display: flex;
   flex-wrap: wrap;
   gap: 0 1em;
@@ -118,8 +147,7 @@ button:focus-visible {
   transition: text-decoration-color 160ms ease-out;
 }
 
-.masthead a:hover,
-.masthead a[aria-current="page"],
+.masthead-nav a:hover,
 .baseline button:hover,
 .contact-social:hover {
   text-decoration-color: currentColor;

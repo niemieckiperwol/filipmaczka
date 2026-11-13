@@ -18,8 +18,9 @@ export function Screen({ tone, children }: { tone: Tone; children: ReactNode }) 
   return (
     <div className={`screen screen--${tone}`}>
       <header className="masthead">
-        <Link href="/" className="masthead-name" aria-current={pathname === "/" ? "page" : undefined}>
-          Filip Maczka
+        <Link href="/" className="masthead-name" aria-label="Filip Maczka" aria-current={pathname === "/" ? "page" : undefined}>
+          <span className="masthead-first">filip</span>
+          <span className="masthead-last">maczka</span>
         </Link>
         <nav className="masthead-nav" aria-label="Main">
           {links.map((link) => (

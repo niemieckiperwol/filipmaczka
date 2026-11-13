@@ -5,7 +5,7 @@ import { allFrames } from "./frames";
 export default function Home() {
   return (
     <Screen tone="white">
-      <Slideshow frames={allFrames} />
+      <Slideshow frames={allFrames} showModel={false} />
     </Screen>
   );
 }
