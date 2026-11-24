@@ -226,9 +226,8 @@ button:focus-visible {
 }
 
 .spread-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   gap: var(--gutter);
   min-height: 0;
 }
@@ -239,21 +238,29 @@ button:focus-visible {
   line-height: 0.8;
 }
 
-.spread-text {
-  max-width: 30ch;
-  font-size: clamp(1.0625rem, 0.75rem + 0.75vw, 1.5rem);
+.spread-body {
+  display: grid;
+  grid-template-columns: minmax(3.5rem, 1fr) minmax(0, 3fr);
+  gap: var(--gutter);
+  align-self: center;
+  font-size: clamp(1rem, 0.7rem + 0.55vw, 1.3rem);
   font-weight: 400;
-  line-height: 1.32;
+  line-height: 1.3;
+}
+
+.spread-text {
+  display: grid;
+  gap: 0.9em;
+  max-width: 30ch;
   text-wrap: pretty;
-  hanging-punctuation: first;
+}
+
+.spread-text p {
+  text-indent: 2.5em;
 }
 
 .spread-text a {
   overflow-wrap: anywhere;
-}
-
-.spread-text p + p {
-  text-indent: 1.6em;
 }
 
 .spread-media {
@@ -325,6 +332,10 @@ button:focus-visible {
   }
 
   .spread-panel {
-    justify-content: flex-start;
+    grid-template-rows: auto auto;
+  }
+
+  .spread-body {
+    align-self: start;
   }
 }

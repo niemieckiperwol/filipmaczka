@@ -47,3 +47,12 @@ next-env.d.ts
 .impeccable/
 *.md
 source-photos/
+
+# sanity content pulled at build time
+/content/
+/public/media/
+
+# sanity studio
+/studio/node_modules/
+/studio/dist/
+/studio/.sanity/

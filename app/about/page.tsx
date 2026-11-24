@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Bio } from "../components/Bio";
 import { Screen } from "../components/Screen";
-import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../contact-details";
+import { about } from "../content";
 
 export const metadata: Metadata = { title: "About" };
 
@@ -11,34 +12,23 @@ export default function About() {
       <main className="spread">
         <section className="spread-panel" aria-labelledby="about-title">
           <h1 id="about-title" className="spread-title">
-            About
+            {about.heading}
           </h1>
-          <div className="spread-text">
-            <p>
-              Filip Maczka is a fashion and portrait photographer working with model agencies,
-              brands and private clients.
-            </p>
-            <p>
-              He shoots agency tests, private sessions, campaigns and lookbooks, in the studio and
-              on location.
-            </p>
-            <p>
-              For bookings and availability, write to <a href={`mailto:${EMAIL}`}>{EMAIL}</a> or
-              find him on Instagram at{" "}
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-                {INSTAGRAM_HANDLE}
-              </a>
-              .
-            </p>
+          <div className="spread-body">
+            <p>Bio</p>
+            <div className="spread-text">
+              <Bio blocks={about.bio} />
+            </div>
           </div>
         </section>
         <figure className="spread-media">
           <Image
-            src="/images/about/autoportret-2024.jpg"
-            alt="Filip Maczka, self-portrait, 2024"
+            src={about.portrait.src}
+            alt={about.portrait.alt || "Filip Maczka"}
             fill
             sizes="(min-width: 768px) 66vw, 100vw"
             className="spread-photo"
+            style={about.portrait.focus ? { objectPosition: about.portrait.focus } : undefined}
             preload
           />
         </figure>

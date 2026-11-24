@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Screen } from "../../components/Screen";
 import { Slideshow } from "../../components/Slideshow";
-import { findSession, sessions } from "../../frames";
+import { findSession, sessions } from "../../content";
 
 export const dynamicParams = false;
 

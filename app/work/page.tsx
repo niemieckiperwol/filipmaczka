@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Screen } from "../components/Screen";
 import { WorkReel } from "../components/WorkReel";
-import { sessions } from "../frames";
+import { sessions } from "../content";
 
 export const metadata: Metadata = { title: "Work" };
 

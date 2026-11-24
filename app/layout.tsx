@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
+import { settings } from "./content";
 import "./globals.css";
 
 const grotesk = Hanken_Grotesk({
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     default: "Filip Maczka",
     template: "%s, Filip Maczka",
   },
-  description: "Filip Maczka, photographer. Agency tests, private shoots, campaigns and lookbooks.",
+  description: settings.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, type CSSProperties, type MouseEvent, type PointerEvent } from "react";
 import { useMountEffect } from "@/hooks/useMountEffect";
-import type { Frame, Session } from "../frames";
+import type { Frame, Session } from "../content";
 
 const SESSION_DURATION = 2200;
 const PHOTO_SIZES = "(min-width: 768px) 42vw, 92vw";

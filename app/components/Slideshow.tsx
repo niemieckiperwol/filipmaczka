@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import { useMountEffect } from "@/hooks/useMountEffect";
-import type { Frame } from "../frames";
+import type { Frame } from "../content";
 
 const FRAME_DURATION = 1400;
 const PHOTO_SIZES = "(min-width: 768px) 42vw, 92vw";
