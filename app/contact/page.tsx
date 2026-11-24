@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <Screen tone="yellow">
       <main className="contact">
-        <h1 className="contact-head">Bookings and availability</h1>
+        <h1>Bookings and availability</h1>
         <a className="contact-social" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
           Instagram {INSTAGRAM_HANDLE}
         </a>
